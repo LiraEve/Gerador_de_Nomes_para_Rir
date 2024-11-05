@@ -20,9 +20,9 @@ def formarPalavra(tipo):
         letra=vogais[random.randint(0, len(vogais)-1)]
         tipo="vogal"
     else:
-        tipo=="vogal"
+        tipo="vogal"
         letra=consoante[random.randint(0, len(consoante)-1)]
-        tipo=="consoante"
+        tipo="consoante"
     print(f'Saida: {letra}; {tipo}')
     return letra, tipo
 
@@ -43,22 +43,23 @@ for letra in alfabeto:
     else:
         consoante.append(letra)
 
-print(f'Lista de vogais: {vogais}, tamanho: {len(vogais)}')
-print(f'Lista de consoantes: {consoante}, tamanho: {len(consoante)}')
+#print(f'Lista de vogais: {vogais}, tamanho: {len(vogais)}')
+#print(f'Lista de consoantes: {consoante}, tamanho: {len(consoante)}')
 
 # Tamanho da Palavra
-tamanho = 6
+tamanho = 4
 
 #Sorteando primeira letra
 PrimeiraLetra=sortearLetraAlfabeto()
 Aux=PrimeiraLetra
+palavra.append(Aux[0])
 
 # Formando Palavra
 for p in range(tamanho):
     Aux=formarPalavra(Aux[1])
     palavra.append(Aux[0])
 
-print(palavra)
+print("Palavra formada:", ''.join(palavra))
 
 #print(sortearLetraAlfabeto())
 #print(formarPalavra("vogal"))
