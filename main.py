@@ -24,6 +24,7 @@ def formarPalavra(tipo):
         letra=consoante[random.randint(0, len(consoante)-1)]
         tipo=="consoante"
     print(f'Saida: {letra}; {tipo}')
+    return letra, tipo
 
 # Abecedário
 alfabeto = "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"
@@ -50,7 +51,14 @@ tamanho = 6
 
 #Sorteando primeira letra
 PrimeiraLetra=sortearLetraAlfabeto()
+Aux=PrimeiraLetra
 
 # Formando Palavra
+for p in range(tamanho):
+    Aux=formarPalavra(Aux[1])
+    palavra.append(Aux[0])
+
+print(palavra)
+
 #print(sortearLetraAlfabeto())
-print(formarPalavra("vogal"))
+#print(formarPalavra("vogal"))
